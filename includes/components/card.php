@@ -10,11 +10,11 @@ class Card {
 
     public function createCard() {
         // Use instance variables instead of parameters
-        echo "<h1>{$this->title}</h1>
-              <p>{$this->body}</p>";
+        return <<<HTML
+            <h1>$this->title</h1>
+            <p>$this->body</p>
+        HTML;
     }
 }
-
-$monday = new Card('Some Text', 'some body text')
 
 ?>

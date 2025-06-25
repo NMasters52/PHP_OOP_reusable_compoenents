@@ -7,14 +7,25 @@
     <title>Document</title>
 </head>
 <body class="bg-green-200">
-    <?php 
-        include './includes/components/card.php';
 
-        //create card
-        $cardOne = new Card('This is a title', 'this is some text body');
+<?php 
+    include_once './includes/components/codeSnippet.php';
 
-        //display card
-        $cardOne->createCard();
-    ?>
+    $exampleSnippet = htmlspecialchars('
+    <div>
+        <img src="" alt="image">
+        <div>
+            <h3></h3>
+            <p></p>
+        </div>
+        <button></button>
+    </div>
+    ');
+
+    $newSnippet = new CodeSnippet($exampleSnippet, 'index.html');
+
+    echo $newSnippet->render();
+?>
+
 </body>
 </html>
