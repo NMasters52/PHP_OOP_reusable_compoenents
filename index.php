@@ -11,6 +11,7 @@
 <?php 
     include_once './includes/components/codeSnippet.php';
 
+    //the gotcha in this component. The variable you pass to the constructor must be assigned with the htmlspecialchars method. Otherwise it wont render on the webpage correctly.
     $exampleSnippet = htmlspecialchars('
     <div>
         <img src="" alt="image">

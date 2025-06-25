@@ -24,12 +24,12 @@ class CodeSnippet {
                     text-gray-200 px-2 py-0.5 rounded mr-auto ml-[8px] cursor-pointer">$this->fileName</p>
                     <!-- copy button -->
                     <button class="text-[12px] md:text-[16px] xl:text-[22px] bg-gray-800 hover:bg-gray-700 
-                    text-gray-200 px-2 py-0.5 rounded cursor-pointer">
+                    text-gray-200 px-2 py-0.5 rounded cursor-pointer copyText" >
                         Copy
                     </button>
                 </div>
                 <!-- The code that displays to the webpage indents as far as it is indented in your editor. SO, the code that goes to the webpage below is not indented. -->
-                <pre class="bg-gray-800 text-white px-[12px]"><code>
+                <pre class="bg-gray-800 text-white px-[12px]"><code id="codeBlock">
                 $this->codeBlock
                 </code></pre>
             </div>
@@ -38,3 +38,35 @@ class CodeSnippet {
 }
 
 ?>
+
+<script>
+
+//add event listener when dom loads
+    document.addEventListener('DOMContentLoaded', () => {
+        //create array of buttons that were made using the same class
+        const copyButtons = document.querySelectorAll('.copyText');
+
+        //iterate over each button adding the logic to them
+        copyButtons.forEach(button => {
+            button.addEventListener('click', async () => {
+                //find the snippet of code to copy 
+                const codeBlock = button.closest('div.w-full').querySelector('code');
+                //trim the white space
+                const textToCopy = codeBlock.textContent.trim();
+
+                try {
+                    //copy to clipboard
+                    await navigator.clipboard.writeText(textToCopy);
+                    //update the copy button to "coppied" for UX then change it back after 3secs
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    setTimeout(() => button.textContent = originalText, 3000)
+                } catch (error) {
+                    console.error('failed to copy', err)
+                };
+            })
+        })
+    })
+
+
+</script>
