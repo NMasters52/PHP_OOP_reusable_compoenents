@@ -22,9 +22,23 @@
     </div>
     ');
 
-    $newSnippet = new CodeSnippet($exampleSnippet, 'index.html');
+    $newSnippetOne = new CodeSnippet($exampleSnippet, 'index.html');
 
-    echo $newSnippet->render();
+    echo $newSnippetOne->render();
+
+    
+
+    $exampleCodeSnippetTwo = htmlspecialchars('
+    <div>
+        <p>Hello World</p>
+    </div>
+    ');
+
+    $newSnippetTwo = new CodeSnippet($exampleCodeSnippetTwo, 'index.html');
+
+    echo $newSnippetTwo->render();
+
+    
 ?>
 
 </body>
