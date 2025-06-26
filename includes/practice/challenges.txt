@@ -1,18 +1,19 @@
-Challenge 1: Basic Class and Object ✅
+✅ Challenge 1: Basic Class and Object 
 
 Task: Create a class called Car with properties for make, model, and year. Include a method called getCarInfo() that returns a string with the car's details.
 
-Challenge 2: Constructor and Destructor✅
+✅ Challenge 2: Constructor and Destructor
 
 Task: Modify the Car class to include a constructor that initializes the properties. Add a destructor that outputs a message when an object is destroyed.
 
-Challenge 3: Inheritance
+✅ Challenge 3: Inheritance
 
 Task: Create a class called ElectricCar that extends the Car class. Add a property for batteryCapacity and a method called getBatteryInfo() that returns the battery capacity.
 
 Challenge 4: Interfaces
 
 Task: Define an interface called Vehicle with methods start() and stop(). Implement this interface in the Car class and the ElectricCar class.
+
 Challenge 5: Abstract Classes
 
 Task: Create an abstract class called Vehicle with an abstract method getFuelType(). Implement this method in both the Car and ElectricCar classes.
