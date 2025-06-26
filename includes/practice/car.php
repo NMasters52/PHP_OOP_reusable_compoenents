@@ -1,12 +1,23 @@
 <?php 
 
 class Car {
-    public $make = "Toyota" ;
-    public $model = "Supra";
-    public $year = "2024";
+    public $make;
+    public $model;
+    public $year;
+
+    public function __construct($make, $model, $year) {
+      $this->make = $make;
+      $this->model = $model;
+      $this->year = $year;
+    
+    }
 
     public function getCarInfo(){
-        return " {$this->make} {$this->model} {$this->year}";
+        return "{$this->make} {$this->model} {$this->year}";
+    }
+
+    public function __destruct() {
+        echo "The {$this->year} {$this->model} is no longer available";
     }
 }
 

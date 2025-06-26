@@ -12,8 +12,9 @@
     
     include  './includes/practice/car.php';
     
-    $supra = new Car;
-    echo $supra->getCarInfo();
+    $supra = new Car('toyta', 'supra', '2024');
+    echo $supra->getCarInfo() . '<br>';
+    echo $supra->__destruct() . '<br>';
 ?>
 
 </body>
