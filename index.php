@@ -15,7 +15,7 @@
     $supra = new Car('toyta', 'supra', '2024');
     echo $supra->getCarInfo() . '<br>';
     echo $supra->__destruct() . '<br>';
-    echo $supra->start() . "<br>";
+    echo $supra->getFuelType() . "<br>";
 
     $tesla = new ElectricCar('Tesla', 'Model S', '2024', '500');
     echo $tesla->getBatteryInfo() . '<br>';

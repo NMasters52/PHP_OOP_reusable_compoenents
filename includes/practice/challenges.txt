@@ -10,7 +10,7 @@ Task: Modify the Car class to include a constructor that initializes the propert
 
 Task: Create a class called ElectricCar that extends the Car class. Add a property for batteryCapacity and a method called getBatteryInfo() that returns the battery capacity.
 
-Challenge 4: Interfaces
+✅Challenge 4: Interfaces
 
 Task: Define an interface called Vehicle with methods start() and stop(). Implement this interface in the Car class and the ElectricCar class.
 

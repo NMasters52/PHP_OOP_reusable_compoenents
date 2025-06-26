@@ -4,7 +4,11 @@ interface Vehicle {
     public function start();
     public function stop();
 };
-class Car implements Vehicle {
+
+abstract class Vehicle1 {
+ abstract public function getFuelType();
+}
+class Car extends Vehicle1 {
     public $make;
     public $model;
     public $year;
@@ -16,6 +20,10 @@ class Car implements Vehicle {
     
     }
 
+    public function getFuelType() {
+        echo "This vehicle take gas";
+    }
+
     public function getCarInfo(){
         return "{$this->make} {$this->model} {$this->year}";
     }
@@ -24,13 +32,13 @@ class Car implements Vehicle {
         echo "The {$this->year} {$this->model} is no longer available" . '<br>';
     }
 
-    public function start() {
-        echo "The {$this->model} has started.<br>";
-    }
+    // public function start() {
+    //     echo "The {$this->model} has started.<br>";
+    // }
 
-    public function stop() {
-    echo "Car has stopped.<br>";
-    }
+    // public function stop() {
+    // echo "Car has stopped.<br>";
+    // }
 }
 
 
