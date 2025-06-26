@@ -1,0 +1,34 @@
+Challenge 1: Basic Class and Object ✅
+
+Task: Create a class called Car with properties for make, model, and year. Include a method called getCarInfo() that returns a string with the car's details.
+
+Challenge 2: Constructor and Destructor✅
+
+Task: Modify the Car class to include a constructor that initializes the properties. Add a destructor that outputs a message when an object is destroyed.
+
+Challenge 3: Inheritance
+
+Task: Create a class called ElectricCar that extends the Car class. Add a property for batteryCapacity and a method called getBatteryInfo() that returns the battery capacity.
+
+Challenge 4: Interfaces
+
+Task: Define an interface called Vehicle with methods start() and stop(). Implement this interface in the Car class and the ElectricCar class.
+Challenge 5: Abstract Classes
+
+Task: Create an abstract class called Vehicle with an abstract method getFuelType(). Implement this method in both the Car and ElectricCar classes.
+
+Challenge 6: Traits
+
+Task: Create a trait called Maintenance that includes methods for scheduleMaintenance() and performMaintenance(). Use this trait in the Car class.
+
+Challenge 7: Composition
+
+Task: Create a class called Garage that can hold multiple Car objects. Include methods to add a car, remove a car, and list all cars in the garage.
+
+Challenge 8: Exception Handling
+
+Task: Modify the Car class to throw an exception if the year property is set to a value less than 1886 (the year the first car was invented). Handle this exception in a script that creates a Car object.
+
+Challenge 9: Static Methods and Properties
+
+Task: Add a static property to the Car class that keeps track of the number of Car instances created. Create a static method to retrieve this count.
