@@ -9,37 +9,11 @@
 <body class="bg-green-200">
 
 <?php 
-    include_once './includes/components/codeSnippet.php';
-
-    //the gotcha in this component. The variable you pass to the constructor must be assigned with the htmlspecialchars method. Otherwise it wont render on the webpage correctly.
-    $exampleSnippet = htmlspecialchars('
-    <div>
-        <img src="" alt="image">
-        <div>
-            <h3></h3>
-            <p></p>
-        </div>
-        <button></button>
-    </div>
-    ');
-
-    $newSnippetOne = new CodeSnippet($exampleSnippet, 'index.html');
-
-    echo $newSnippetOne->render();
-
     
-
-    $exampleCodeSnippetTwo = htmlspecialchars('
-    <div>
-        <p>Hello World</p>
-    </div>
-    ');
-
-    $newSnippetTwo = new CodeSnippet($exampleCodeSnippetTwo, 'index.html');
-
-    echo $newSnippetTwo->render();
-
+    include  './includes/practice/car.php';
     
+    $supra = new Car;
+    echo $supra->getCarInfo();
 ?>
 
 </body>
